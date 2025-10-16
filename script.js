@@ -1,0 +1,147 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background-image: url(imagem5.png);
+    background-position: center;
+    
+    
+}
+
+.selection-container {
+    text-align: center;
+    padding: 40px;
+    background: rgba(238, 232, 232, 0.247);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #cacaca;
+    margin-bottom: 30px;
+}
+
+.profession-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.profession-card {
+    background-color: #3316c56c;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s, border 0.1s;
+    border: 2px solid transparent;
+}
+
+.profession-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(13, 25, 192, 0.548);
+}
+
+.profession-card.selected {
+    border-color: #556eff; /* Rosa vibrante */
+    box-shadow: 0 0 20px rgba(73, 76, 255, 0.5);
+}
+
+.profession-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+
+.seleção-avatar1{
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+}
+
+
+.seleção-avatar1.hidden{
+ display: none;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.grade-avatar1{
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+
+}
+
+.carta-avatar1{
+    background-color: #fda31b71;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s, border 0.1s;
+    border: 2px solid transparent;
+}
+
+
+.carta-avatar1.selected {
+    border-color: #ffb055; /* Azul vibrante */
+    box-shadow: 0 0 15px rgba(255, 201, 85, 0.5);
+}
+
+.carta-avatar.img {
+    width: 100%;
+    border-radius: 6px; 
+}
+
+.next-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #5555ff;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.next-button:hover:not(:disabled) {
+    background-color: #556eff;
+}
+
+.next-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .profession-grid, .avatar-grid {
+        grid-template-columns: 7fr;
+    }
+}
+
+
+
+
