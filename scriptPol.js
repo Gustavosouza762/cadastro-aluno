@@ -62,3 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// Seleciona todas as cartas de avatar
+const cartaAvatar2 = document.querySelectorAll('.carta-avatar2');
+
+cartaAvatar2.forEach(card => {
+  card.addEventListener('click', () => {
+    const inner = card.querySelector('.card-inner');
+    inner.classList.toggle('is-flipped');
+  });
+});
